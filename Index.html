@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#100d18">
+  <meta name="description" content="JabezTunes — discover music, support artists and enjoy your sound.">
+  <title>JabezTunes | Your Music World</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a href="#home" class="brand" aria-label="JabezTunes home">
+      <span class="brand-icon">♫</span>
+      Jabez<span>Tunes</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Toggle navigation" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav class="navigation" id="navigation">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#discover" class="nav-link">Discover</a>
+      <a href="#artists" class="nav-link">For Artists</a>
+      <a href="#about" class="nav-link">About</a>
+    </nav>
+
+    <a href="#account" class="login-button">Sign in</a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="eyebrow">YOUR SOUND. YOUR WORLD.</span>
+        <h1>Music brings<br>us <span>together.</span></h1>
+        <p>
+          Discover new sounds, support artists and find the
+          music that speaks to you.
+        </p>
+        <div class="hero-actions">
+          <a href="#discover" class="button primary">Explore music ↗</a>
+          <a href="#artists" class="button secondary">I'm an artist</a>
+        </div>
+        <p class="small-note">A new home for your music journey.</p>
+      </div>
+
+      <div class="hero-art" aria-label="Music artwork illustration">
+        <div class="art-glow"></div>
+        <div class="record">
+          <div class="record-label">JT<br><span>♫</span></div>
+        </div>
+        <div class="floating-note note-one">♫</div>
+        <div class="floating-note note-two">♪</div>
+        <div class="art-caption">
+          <span>THE SOUND OF YOU</span>
+          <strong>Press play on something new.</strong>
+        </div>
+      </div>
+    </section>
+<section id="upload" class="account-section">
+  <h2>Upload Your Music</h2>
+  <p>Submit your music for review before it becomes available to listeners.</p>
+
+  <form id="uploadForm" class="auth-form">
+    <label for="songTitle">Song title</label>
+    <input id="songTitle" type="text" maxlength="150" required>
+
+    <label for="songGenre">Genre</label>
+    <input id="songGenre" type="text" maxlength="80" required>
+
+    <label for="songDescription">Description</label>
+    <textarea id="songDescription" maxlength="1000"></textarea>
+
+    <label for="audioFile">Audio file (maximum 20 MB)</label>
+    <input id="audioFile" type="file"
+      accept="audio/mpeg,audio/mp4,audio/ogg,audio/wav,audio/aac"
+      required>
+
+    <label for="coverFile">Cover image (optional)</label>
+    <input id="coverFile" type="file"
+      accept="image/jpeg,image/png,image/webp">
+
+    <button class="button primary" type="submit">
+      Submit song for review
+    </button>
+
+    <p id="uploadMessage" role="status" aria-live="polite"></p>
+  </form>
+</section>
+    
+
+    <section class="section" id="discover">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">YOUR NEXT FAVOURITE</span>
+          <h2>Discover music</h2>
+        </div>
+        <span class="coming-label">Library coming soon</span>
+      </div>
+
+      <label class="search-box">
+        <span aria-hidden="true">⌕</span>
+        <input id="musicSearch" type="search"
+          placeholder="Search songs and artists..."
+          aria-label="Search songs and artists">
+      </label>
+
+      <div class="empty-state" id="emptyState">
+        <div class="empty-icon">♫</div>
+        <h3>Your music journey starts here</h3>
+        <p>
+          The music library will appear here once uploads and
+          Supabase are connected.
+        </p>
+      </div>
+      <p class="search-message" id="searchMessage" aria-live="polite"></p>
+    </section>
+
+    <section class="artist-section" id="artists">
+      <div>
+        <span class="eyebrow">MADE FOR CREATORS</span>
+        <h2>Your music deserves<br>a place to be heard.</h2>
+        <p>
+          Artists will be able to submit their music for review.
+          Approved songs can then join the public library.
+        </p>
+        <a href="#account" class="button primary">Artist access</a>
+      </div>
+      <div class="artist-symbol" aria-hidden="true">♫</div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <span class="eyebrow">ABOUT JABEZTUNES</span>
+      <h2>Built around the love of music.</h2>
+      <p>
+        Our goal is to connect listeners with artists through
+        a simple, welcoming music experience.
+      </p>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span>🎧</span>
+          <h3>Listen</h3>
+          <p>Discover music and enjoy approved releases.</p>
+        </article>
+        <article class="feature-card">
+          <span>🎤</span>
+          <h3>Create</h3>
+          <p>Give artists a path to submit their work.</p>
+        </article>
+        <article class="feature-card">
+          <span>🛡️</span>
+          <h3>Respect</h3>
+          <p>Protect accounts and respect music rights.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="account-section" id="account">
+      <h2>Your JabezTunes account</h2>
+      <p>Registration and sign-in will be enabled in a later stage.</p>
+      <button class="button primary" id="accountNotice">
+        Account setup coming soon
+      </button>
+      <p class="notice" id="accountMessage" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="#home" class="brand">
+      <span class="brand-icon">♫</span>
+      Jabez<span>Tunes</span>
+    </a>
+    <p>Discover music. Celebrate artists.</p>
+    <p class="copyright">
+      © <span id="year"></span> JabezTunes
+    </p>
+  </footer>
+</body>
+</html>
